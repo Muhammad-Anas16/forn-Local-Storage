@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main" id="main-Box-Login">
+
+        <div class="container">
+
+            <form onsubmit="toCheckLogin(event)">
+
+                <div class="inp-Box">
+                    <input type="text" name="email" id="login-email" placeholder="Email Address" oninput="loginValidateInp(event, 'email')">
+                </div>
+                <span class="span" id="e-spn">abc</span>
+
+                <div class="inp-Box">
+                    <input type="password" name="password" id="login-password" placeholder="Your Password" oninput="loginValidateInp(event, 'password')">
+                </div>
+                <span class="span" id="p-spn">abc</span>
+
+                <div class="inp-Box">
+                    <input type="submit" value="submit">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <a href="./Create Account/signUp.html">Sign Up</a>
+</body>
+
+<script src="login.js"></script>
+
+</html>
