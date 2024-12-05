@@ -25,7 +25,7 @@ function signUpValidate(e, check) { // for Validation
         if (e.target.value == "") {
             userSpan.style.visibility = "hidden";
         }
-        else if (e.target.value.length < 3) {
+        else if (e.target.value.length < 2) {
             userSpan.style.visibility = "visible";
             userSpan.innerText = "Invalid User Name";
         }
@@ -79,5 +79,3 @@ function toSubmit(e) { // no :1
 
     setItem(data); // update Local-Storage,
 };
-
-// localStorage.removeItem("users Data")
