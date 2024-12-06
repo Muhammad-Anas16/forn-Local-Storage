@@ -50,6 +50,7 @@ function toCheckLogin(e) {
             }
 
             if (logEmail.value == logData[i].email && logPass.value == logData[i].password) {
+                localStorage.setItem("log-User-Data", JSON.stringify(logData[i]))
                 console.log(logData[i]);
                 setLogin(logArr);
                 alert("User Login Seccessfully");

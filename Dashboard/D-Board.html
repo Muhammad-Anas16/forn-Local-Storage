@@ -15,8 +15,12 @@
 
     <script>
 
+        let Check = JSON.parse(localStorage.getItem("log-User-Data"));
+        console.log(Check);
+
         function logOut() {
             localStorage.removeItem("User-Login");
+            localStorage.removeItem("log-User-Data");
             location.replace("/index.html")
         }
 
