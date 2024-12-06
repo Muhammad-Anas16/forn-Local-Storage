@@ -6,43 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="signUp.css">
 </head>
 
 <body>
 
     <div class="main" id="main-Box-SignUp">
 
-        <div class="container">
+        <section class="sec1">
+            <div class="box"></div>
+        </section>
 
-            <form onsubmit="toSubmit(event)">
+        <section class="sec2">
 
-                <div class="inp-Box">
-                    <input type="text" name="user" id="signUp-name" placeholder="User Name" oninput="signUpValidate(event, 'user')">
-                </div>
-                <span class="span" id="span-user">abc</span>
+            <div class="form">
 
-                <div class="inp-Box">
-                    <input type="email" name="email" id="signUp-email" placeholder="Email Address" oninput="signUpValidate(event, 'email')">
-                </div>
-                <span class="span" id="span-email">abc</span>
+                <h2>sign up</h2>
 
-                <div class="inp-Box">
-                    <input type="password" name="password" id="signUp-password" placeholder="Your Password" oninput="signUpValidate(event, 'password')">
-                </div>
-                <span class="span" id="span-password">abc</span>
+                <form onsubmit="toSubmit(event)">
 
-                <div class="inp-Box">
-                    <input type="submit" value="submit">
-                </div>
+                    <div class="inp-Box">
+                        <input type="text" name="user" id="signUp-name" placeholder="User Name"
+                            oninput="signUpValidate(event, 'user')">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <span class="span" id="span-user">abc</span>
 
-            </form>
+                    <div class="inp-Box">
+                        <input type="email" name="email" id="signUp-email" placeholder="Email Address"
+                            oninput="signUpValidate(event, 'email')">
+                        <i class="fa-solid fa-at"></i>
+                    </div>
+                    <span class="span" id="span-email">abc</span>
 
-        </div>
+                    <div class="inp-Box">
+                        <input type="password" name="password" id="signUp-password" placeholder="Your Password"
+                            oninput="signUpValidate(event, 'password')">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </div>
+                    <span class="span" id="span-password">abc</span>
+
+                    <div class="inp-Box">
+                        <input type="submit" value="submit">
+                    </div>
+
+                </form>
+                <a href="../index.html">login</a>
+
+            </div>
+
+        </section>
 
     </div>
 
-    <a href="../index.html">login</a>
 
     <!-- <img src="" alt=""> -->
 

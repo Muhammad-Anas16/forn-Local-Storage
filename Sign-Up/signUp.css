@@ -1,0 +1,96 @@
+.span {
+    visibility: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    /* box-sizing: border-box; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/image/art-artwork.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main {
+    width: 78%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff4d;
+}
+
+.sec1 {
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 96%;
+    height: 96%;
+    background-image: url(/image/Sign-Up/space-gray.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sec2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 90%;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+h2{
+    color: white;
+}
+
+.inp-Box {
+    width: 80%;
+    height: 1em;
+    padding: 7px;
+    border: solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 90%;
+    height: 100%;
+}
+i{
+    color: white;
+}
+
+input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
