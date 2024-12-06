@@ -1,5 +1,10 @@
 
-// if(){}
+// Check Login
+
+let checkLogin = JSON.parse(localStorage.getItem("User-Login"));
+if(checkLogin){
+    location.replace("/Dashboard/D-Board.html");
+}
 
 // Get Element ///////////////////////////
 
@@ -32,17 +37,28 @@ function toCheckLogin(e) {
         alert("Fill All Input First")
     }
     else if (logData == null) {
-        alert("Email Address or Password Not Exist..");
+        alert("Email Address & Password Not Exist..");
     }
     else {
         for (var i = 0; i < logData.length; i++) {
+
+            if (logEmail.value != logData[i].email) {
+                alert("Email Address Not Found");
+            }
+            else if (logPass.value != logData[i].password) {
+                alert("Password Not Found");
+            }
 
             if (logEmail.value == logData[i].email && logPass.value == logData[i].password) {
                 console.log(logData[i]);
                 setLogin(logArr);
                 alert("User Login Seccessfully");
+                location.replace("/Dashboard/D-Board.html");
                 return
             }
+
+            logEmail.value = "";
+            logPass.value = "";
         }
     }
 };

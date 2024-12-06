@@ -78,4 +78,6 @@ function toSubmit(e) { // no :1
     password.value = "";
 
     setItem(data); // update Local-Storage,
+
+    location.assign("/index.html");
 };
