@@ -28,18 +28,24 @@ function toCheckLogin(e) {
         password: logPass.value,
     },]
 
-    for (var i = 0; i < logData.length; i++) {
-        if (logEmail.value == logData[i].email && logPass.value == logData[i].password) {
-            console.log(logData[i]);
-            setLogin(logArr);
-            alert("User Login Seccessfully");
-        }
-        else{
-            alert('Email Address or Password Not Found..');
+    if (logEmail.value == "" && logPass.value == "") {
+        alert("Fill All Input First")
+    }
+    else if (logData == null) {
+        alert("Email Address or Password Not Exist..");
+    }
+    else {
+        for (var i = 0; i < logData.length; i++) {
+
+            if (logEmail.value == logData[i].email && logPass.value == logData[i].password) {
+                console.log(logData[i]);
+                setLogin(logArr);
+                alert("User Login Seccessfully");
+                return
+            }
         }
     }
-
 };
 
-
+// console.log("LogData", logData);
 
