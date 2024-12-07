@@ -16,14 +16,14 @@
 
     <div class="main" id="main-Box-SignUp">
 
-        <section class="sec1">
+        <!-- <section class="sec1">
             <div class="box">
                 <div class="text">
                     <h1>welcome</h1>
                     <p>please sign up using your personal information to stay connected with us.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="sec2">
 
@@ -48,11 +48,26 @@
                     <span class="span" id="span-email">abc</span>
 
                     <div class="inp-Box">
-                        <input type="password" name="password" id="signUp-password" placeholder="Your Password"
+                        <input type="password" name="password" id="signUp-password" placeholder="Password"
                             oninput="signUpValidate(event, 'password')">
                         <i class="fa-solid fa-eye-slash"></i>
                     </div>
                     <span class="span" id="span-password">abc</span>
+
+                    <div class="inp-container">
+
+                        <div class="radio">
+                            <div class="radio-inp">
+                                <label for="male">male</label>
+                                <input type="radio" name="gender" value="male" id="male">
+                            </div>
+
+                            <div class="radio-inp">
+                                <label for="female">female</label>
+                                <input type="radio" name="gender" value="female" id="female">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="inp-Box" id="sub-Btn-Box">
                         <input type="submit" value="submit" id="sub-Btn">

@@ -13,7 +13,6 @@ let userSpan = document.getElementById('span-user');
 let emailSpan = document.getElementById('span-email');
 let passSpan = document.getElementById('span-password');
 
-
 // Save it in array using : ""
 
 var data = (getItem()) ? [...getItem()] : [];
@@ -26,13 +25,13 @@ function signUpValidate(e, check) { // for Validation
         if (e.target.value == "") {
             userSpan.style.visibility = "hidden";
         }
-        else if (e.target.value.length < 2) {
-            userSpan.style.visibility = "visible";
-            userSpan.innerText = "Invalid User Name";
-        }
-        else if (e.target.value.length > 3) {
+        else if (e.target.value.length >= 3) {
             userSpan.style.visibility = "visible";
             userSpan.innerText = "Valid User Name";
+        }
+        else if (e.target.value.length <= 2) {
+            userSpan.style.visibility = "visible";
+            userSpan.innerText = "Invalid User Name";
         }
     }
 
@@ -44,13 +43,13 @@ function signUpValidate(e, check) { // for Validation
         if (e.target.value == "") {
             passSpan.style.visibility = "hidden";
         }
-        else if (e.target.value.length < 6) {
-            passSpan.style.visibility = "visible";
-            passSpan.innerText = "Week Password";
-        }
-        else if (e.target.value.length > 7) {
+        else if (e.target.value.length >= 5) {
             passSpan.style.visibility = "visible";
             passSpan.innerText = "Strong Password";
+        }
+        else if (e.target.value.length <= 4) {
+            passSpan.style.visibility = "visible";
+            passSpan.innerText = "Week Password";
         }
     }
 }
