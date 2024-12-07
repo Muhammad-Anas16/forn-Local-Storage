@@ -40,9 +40,10 @@ body {
 .box {
     width: 96%;
     height: 96%;
-    background-image: url(/image/Sign-Up/nature.jpg);
+    background-image: url(/image/Sign-Up/city-light.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 20px 0 0 20px;
     display: flex;
     align-items: center;
@@ -61,36 +62,38 @@ body {
     width: 90%;
     text-align: center;
 }
-h2{
+
+h2 {
     color: white;
 }
 
 .inp-Box {
     width: 80%;
     height: 1em;
-    padding: 7px;
+    padding: 14px;
     border: solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
 }
 
 input {
     outline: none;
     border: none;
-    background-color: transparent;
-    height: 90%;
+    background: transparent !important;
+    width: 90%;
     height: 100%;
-    color: #fff;
+    color: #000000;
 }
-i{
-    color: white;
+
+i {
+    width: 10%;
 }
 
 input::placeholder {
-    color: #ffffff;
+    color: black;
     opacity: 1;
 }
 
@@ -100,18 +103,58 @@ form {
     align-items: center;
     gap: 0.3em 1em;
 }
-#sub-Btn-Box{
+
+#sub-Btn-Box {
     cursor: pointer;
 }
 
-#sub-Btn{
+#sub-Btn {
     width: 100%;
     height: 100%;
 }
 
-.text{
+.text {
     width: 90%;
     height: 70%;
     text-align: center;
     color: #fff;
+}
+
+.city {
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+
+@media only screen and (max-width : 768px) {
+    .form {
+        width: 80%;
+        margin-top: -10px;
+    }
+
+    .inp-Box {
+        padding: 6px 9px;
+    }
+}
+
+@media only screen and (max-width : 425px) {
+    .main {}
+
+    .sec1 {
+        display: none;
+    }
+
+    .sec2 {
+        width: 70%;
+        height: 100%;
+        padding: 10px 0 20px;
+    }
+
+    .inp-Box {
+        width: 100%;
+    }
+
 }

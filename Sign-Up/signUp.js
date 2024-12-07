@@ -6,6 +6,9 @@
 let user = document.getElementById('signUp-name');
 let email = document.getElementById('signUp-email');
 let password = document.getElementById('signUp-password');
+let city = document.getElementById('cityName');
+
+var regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/; //regex
 
 // Get Sign-Up Span 
 
@@ -19,6 +22,11 @@ var data = (getItem()) ? [...getItem()] : [];
 var login = [];
 
 // function ///////////////////////////
+
+function showHide(e, watch) { // for sgow and hide pass word
+    console.log(e.target);
+    console.log(watch);
+}
 
 function signUpValidate(e, check) { // for Validation
     if (check === 'user') {
@@ -36,7 +44,17 @@ function signUpValidate(e, check) { // for Validation
     }
 
     if (check === 'email') {
-        console.log(e.target);
+        if (email.value == "") {
+            emailSpan.style.visibility = "hidden";
+        }
+        else if (email.value.match(regex)) {
+            emailSpan.style.visibility = "visible";
+            emailSpan.innerText = "Valid Email Address";
+        }
+        else if (!email.value.match(regex)) {
+            emailSpan.style.visibility = "visible";
+            emailSpan.innerText = "Invalid Email Address";
+        }
     }
 
     if (check === 'password') {
@@ -78,6 +96,9 @@ function toSubmit(e) { // no :1
     else if (password.value == "") {
         alert("Password is empty");
     }
+    else if (city.value == "empty") {
+        alert("City is empty");
+    }
     else {
 
         data = [...data,
@@ -85,15 +106,18 @@ function toSubmit(e) { // no :1
             name: user.value,
             email: email.value,
             password: password.value,
+            city: city.value,
         },
         ];
 
-        login = [...login,
-        {
+        let logUserData = {
+            name: user.value,
             email: email.value,
             password: password.value,
+            city: city.value,
         }
-        ];
+
+        localStorage.setItem("log-User-Data", JSON.stringify(logUserData));
 
         user.value = "";
         email.value = "";
