@@ -1,5 +1,7 @@
 .span {
     visibility: hidden;
+    margin-left: -35%;
+    font-size: 0.7em;
 }
 
 body {
@@ -8,11 +10,10 @@ body {
     margin: 0;
     padding: 0;
     text-transform: capitalize;
-    /* box-sizing: border-box; */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/image/art-artwork.jpg);
+    background-image: url(/image/digital-art.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -20,17 +21,17 @@ body {
 
 .main {
     width: 78%;
-    height: 70vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #ffffff4d;
+    background-color: #ffffff21;
+    border-radius: 20px;
 }
 
 .sec1 {
     width: 50%;
     height: 100%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,9 +40,13 @@ body {
 .box {
     width: 96%;
     height: 96%;
-    background-image: url(/image/Sign-Up/space-gray.jpg);
+    background-image: url(/image/Sign-Up/nature.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sec2 {
@@ -79,13 +84,14 @@ input {
     background-color: transparent;
     height: 90%;
     height: 100%;
+    color: #fff;
 }
 i{
     color: white;
 }
 
 input::placeholder {
-    color: black;
+    color: #ffffff;
     opacity: 1;
 }
 
@@ -93,4 +99,20 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.3em 1em;
+}
+#sub-Btn-Box{
+    cursor: pointer;
+}
+
+#sub-Btn{
+    width: 100%;
+    height: 100%;
+}
+
+.text{
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    color: #fff;
 }

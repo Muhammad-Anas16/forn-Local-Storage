@@ -55,7 +55,7 @@ function signUpValidate(e, check) { // for Validation
     }
 }
 
-function setLogin(login){
+function setLogin(login) {
     localStorage.setItem("User-Login", JSON.stringify(login));
 }
 
@@ -70,28 +70,41 @@ function getItem() {
 function toSubmit(e) { // no :1
     e.preventDefault();
 
-    data = [...data,
-    {
-        name: user.value,
-        email: email.value,
-        password: password.value,
-    },
-    ];
-
-    login = [...login,
-    {
-        email: email.value,
-        password: password.value,
+    if (user.value == "") {
+        alert("User Name is empty");
     }
-    ];
+    else if (email.value == "") {
+        alert("Email is empty");
+    }
+    else if (password.value == "") {
+        alert("Password is empty");
+    }
+    else {
 
-    user.value = "";
-    email.value = "";
-    password.value = "";
+        data = [...data,
+        {
+            name: user.value,
+            email: email.value,
+            password: password.value,
+        },
+        ];
 
-    setItem(data); // update Local-Storage,
+        login = [...login,
+        {
+            email: email.value,
+            password: password.value,
+        }
+        ];
 
-    setLogin(login);
+        user.value = "";
+        email.value = "";
+        password.value = "";
 
-    location.assign("/index.html");
+        setItem(data); // update Local-Storage,
+
+        setLogin(login);
+
+        location.assign("/index.html");
+
+    }
 };
