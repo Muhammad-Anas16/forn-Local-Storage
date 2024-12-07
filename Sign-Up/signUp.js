@@ -17,6 +17,7 @@ let passSpan = document.getElementById('span-password');
 // Save it in array using : ""
 
 var data = (getItem()) ? [...getItem()] : [];
+var login = [];
 
 // function ///////////////////////////
 
@@ -54,6 +55,10 @@ function signUpValidate(e, check) { // for Validation
     }
 }
 
+function setLogin(login){
+    localStorage.setItem("User-Login", JSON.stringify(login));
+}
+
 function setItem(data) { // no:2
     localStorage.setItem('users Data', JSON.stringify(data));
 }
@@ -73,11 +78,20 @@ function toSubmit(e) { // no :1
     },
     ];
 
+    login = [...login,
+    {
+        email: email.value,
+        password: password.value,
+    }
+    ];
+
     user.value = "";
     email.value = "";
     password.value = "";
 
     setItem(data); // update Local-Storage,
+
+    setLogin(login);
 
     location.assign("/index.html");
 };
