@@ -82,6 +82,15 @@ function getItem() {
 function toSubmit(e) { // no :1
     e.preventDefault();
 
+
+    for (var i = 0; i < data.length; i++) {
+
+        if (email.value == data[i].email) {
+            alert("Thie Email Addres Already Exist");
+            return
+        }
+    }
+
     if (user.value == "") {
         alert("User Name is empty");
     }
