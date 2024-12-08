@@ -1,0 +1,14 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(/image/Dashboard/abstract-balls.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+nav a{
+    color: white !important;
+}
