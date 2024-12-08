@@ -22,13 +22,11 @@ let modalText = document.getElementsByClassName("text")[0];
 let modalBtn = document.getElementsByClassName("Box-container")[0];
 let submitBtn = document.getElementsByClassName("container")[0];
 
-console.log(submitBtn);
-console.log(modalBtn);
-
 // function =======================
 
 function ClosePopUp() {
     modalBtn.style.display = "none";
+    submitBtn.style.display= "flex";
 }
 
 function getLogin() {
@@ -48,10 +46,12 @@ function toCheckLogin(e) {
     },]
 
     if (logEmail.value == "" && logPass.value == "") {
+        submitBtn.style.display= "none";
         modalText.innerHTML = `Fill All Input First`;
         modalBtn.style.display = "flex";
     }
     else if (logData == null) {
+        submitBtn.style.display= "none";
         modalText.innerHTML = `Account Not Exist Please  <a href="./Sign-Up/signUp.html">create an account</a>`;
         modalBtn.style.display = "flex";
     }
@@ -59,11 +59,13 @@ function toCheckLogin(e) {
         for (var i = 0; i < logData.length; i++) {
 
             if (logEmail.value != logData[i].email) {
+                submitBtn.style.display= "none";
                 intro.innerHTML = `Invalid email!`;
                 modalText.innerHTML = `You Input a wrong email`;
                 modalBtn.style.display = "flex";
             }
             else if (logPass.value != logData[i].password) {
+                submitBtn.style.display= "none";
                 intro.innerHTML = `Invalid Password!!`;
                 modalText.innerHTML = `You Input a wrong password`;
                 modalBtn.style.display = "flex";
@@ -83,5 +85,3 @@ function toCheckLogin(e) {
         }
     }
 };
-
-// console.log("LogData", logData);
