@@ -123,10 +123,6 @@ function toSubmit(e) { // no :1
 
         localStorage.setItem("log-User-Data", JSON.stringify(logUserData));
 
-        user.value = "";
-        email.value = "";
-        password.value = "";
-
         setItem(data); // update Local-Storage,
 
         setLogin(login);
@@ -135,3 +131,9 @@ function toSubmit(e) { // no :1
 
     }
 };
+
+
+user.value = "";
+email.value = "";
+password.value = "";
+city.value = "empty";
