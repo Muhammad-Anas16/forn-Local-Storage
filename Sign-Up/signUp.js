@@ -23,22 +23,6 @@ var login = [];
 
 // function ///////////////////////////
 
-function showHide(e, watch) { // for sgow and hide pass word
-    console.log(e.target);
-    console.log(watch);
-    console.log(e.target.previousElementSibling.type);
-    console.log(e.target.previousElementSibling);
-
-    // if (e.target.previousElementSibling.type = "password") {
-    //     e.target.style.color = "#ffffff";
-    //     e.target.previousElementSibling.type = "text";
-    // }
-    // else if (e.target.previousElementSibling.type = "text") {
-    //     e.target.style.color = "#000000";
-    //     e.target.previousElementSibling.type = "password";
-    // }
-}
-
 function signUpValidate(e, check) { // for Validation
     if (check === 'user') {
         if (e.target.value == "") {
