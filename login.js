@@ -2,7 +2,7 @@
 // Check Login
 
 let checkLogin = JSON.parse(localStorage.getItem("User-Login"));
-if(checkLogin){
+if (checkLogin) {
     location.replace("/Dashboard/D-Board.html");
 }
 
@@ -15,7 +15,21 @@ let logData = JSON.parse(localStorage.getItem('users Data'));
 
 let logArr = (getLogin()) ? [...getLogin()] : [];
 
+// For Pop Up /////////////////////////
+
+let intro = document.getElementsByClassName("intro")[0];
+let modalText = document.getElementsByClassName("text")[0];
+let modalBtn = document.getElementsByClassName("Box-container")[0];
+let submitBtn = document.getElementsByClassName("container")[0];
+
+console.log(submitBtn);
+console.log(modalBtn);
+
 // function =======================
+
+function ClosePopUp() {
+    modalBtn.style.display = "none";
+}
 
 function getLogin() {
     return JSON.parse(localStorage.getItem("User-Login"));
@@ -34,19 +48,25 @@ function toCheckLogin(e) {
     },]
 
     if (logEmail.value == "" && logPass.value == "") {
-        alert("Fill All Input First")
+        modalText.innerHTML = `Fill All Input First`;
+        modalBtn.style.display = "flex";
     }
     else if (logData == null) {
-        alert("Email Address & Password Not Exist..");
+        modalText.innerHTML = `Account Not Exist Please  <a href="./Sign-Up/signUp.html">create an account</a>`;
+        modalBtn.style.display = "flex";
     }
     else {
         for (var i = 0; i < logData.length; i++) {
 
             if (logEmail.value != logData[i].email) {
-                alert("Email Address Not Found");
+                intro.innerHTML = `Invalid email!`;
+                modalText.innerHTML = `You Input a wrong email`;
+                modalBtn.style.display = "flex";
             }
             else if (logPass.value != logData[i].password) {
-                alert("Password Not Found");
+                intro.innerHTML = `Invalid Password!!`;
+                modalText.innerHTML = `You Input a wrong password`;
+                modalBtn.style.display = "flex";
             }
 
             if (logEmail.value == logData[i].email && logPass.value == logData[i].password) {
@@ -65,4 +85,3 @@ function toCheckLogin(e) {
 };
 
 // console.log("LogData", logData);
-

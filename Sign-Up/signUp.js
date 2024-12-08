@@ -101,7 +101,7 @@ function toSubmit(e) { // no :1
         alert("Password is empty");
     }
     else if (city.value == "empty") {
-        alert("City is empty");
+        alert("Select a City");
     }
     else {
 
