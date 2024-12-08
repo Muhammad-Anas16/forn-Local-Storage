@@ -128,6 +128,10 @@ form {
     border: none;
 }
 
+i{
+    color: #000000;
+}
+
 
 @media only screen and (max-width : 768px) {
     .form {
