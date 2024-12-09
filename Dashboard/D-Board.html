@@ -20,31 +20,54 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/image/Dashboard/icon.webp" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">
-                <span class="dash-Spn" id="DashSpan">User Name</span>
-            </a>
-            <button onclick="logOut()">Log Out</button>
+    <div class="container">
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/image/Dashboard/icon.webp" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    <span class="dash-Spn" id="DashSpan">User Name</span>
+                </a>
+                <button class="btn btn-dark" onclick="logOut()">Log Out</button>
+            </div>
+
+        </nav>
+
+        <div class="main">
+
+            <div class="container-box">
+                <div class="box">
+                    <h1>hello <span id="DashBoard-Span">abc</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam placeat, magni, nihil
+                        exercitationem
+                        ipsum perspiciatis sunt optio maiores amet at voluptatibus quibusdam facere modi enim. Ipsam ea
+                        debitis illo architecto.</p>
+                </div>
+                <div class="img">
+                    <img src="/image/Dashboard/web-app-developer.png">
+                </div>
+            </div>
         </div>
 
-    </nav>
-
-
-    <h1>Dashboard</h1>
+    </div>
 
 
     <script>
 
+        let userName = document.getElementById("DashSpan");
+        let greet = document.getElementById("DashBoard-Span");
+
         let Check = JSON.parse(localStorage.getItem("log-User-Data"));
         console.log(Check);
+
+        userName.innerText = Check.name;
+        greet.innerText = Check.name;
 
         function logOut() {
             localStorage.removeItem("User-Login");
             localStorage.removeItem("log-User-Data");
-            location.replace("/index.html")
+            location.replace("/index.html");
         }
 
     </script>

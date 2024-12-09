@@ -1,3 +1,9 @@
+*{
+    color: white !important;
+    font-weight: 00 !important;
+    text-transform: capitalize !important;
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -9,6 +15,43 @@ body {
     background-position: center;
     overflow: hidden;
 }
+nav{
+    background-color: #21252967 !important;
+}
 nav a{
     color: white !important;
+}
+
+.container-box{
+    margin-top: 10% !important;
+    width: 100% !important;
+    height: 80% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    width: 50% !important;
+}
+.box p{
+    font-size: 10px;
+}
+.container-box .img{
+    width: 50% !important;
+}
+.img img{
+    width: 100% !important;  
+}
+
+@media only screen and (max-width : 320px) {
+    .container-box{
+        flex-direction: column;
+    }
+    .box{
+        width: 100% !important;
+    }
+    .img{
+        width: 100% !important;
+    }
 }
