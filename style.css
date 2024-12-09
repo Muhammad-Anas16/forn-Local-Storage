@@ -107,8 +107,8 @@ a {
 }
 
 .modal {
-    width: 30%;
-    height: 55%;
+    width: 300px;
+    height: 280px;
     background-color: #ffffff56;
     border-radius: 10px;
     padding: 10px 0 20px;
@@ -137,18 +137,22 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: -15%;
+    margin-bottom: -20%;
+    font-weight: 700;
 }
 .text{
     width: 70%;
     margin-bottom: 10%;
     font-size: 10px;
-    font-weight: 900;}
+    font-weight: 900;
+}
 .btn{
     width: 30%;
     background-color: #ff0000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
 }
 .btn button{
     background: transparent;

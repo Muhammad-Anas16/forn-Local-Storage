@@ -52,7 +52,7 @@ function toCheckLogin(e) {
     }
     else if (logData == null) {
         submitBtn.style.display= "none";
-        modalText.innerHTML = `Account Not Exist Please <a href="./Sign-Up/signUp.html">create an account</a>`;
+        modalText.innerHTML = `Not Found Please <a href="./Sign-Up/signUp.html">create account</a>`;
         modalBtn.style.display = "flex";
     }
     else {
