@@ -29,13 +29,23 @@ nav a{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.521) !important;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .box{
     width: 50% !important;
 }
+h1{
+    color: black !important;
+}
+h1 span{
+color: black !important;
+}
 .box p{
     font-size: 10px;
+    color: black !important;
 }
 .container-box .img{
     width: 50% !important;
